@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>ORANGE</title>
+  <icon>https://1921134176.github.io/icon.png</icon>
+  <subtitle>I Love Orange</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://1921134176.github.io/"/>
+  <updated>2019-11-04T06:19:22.669Z</updated>
+  <id>https://1921134176.github.io/</id>
+  
+  <author>
+    <name>CHENG XIN</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>高速下载多波束数据的方法</title>
+    <link href="https://1921134176.github.io/2019/11/04/%E9%AB%98%E9%80%9F%E4%B8%8B%E8%BD%BD%E5%A4%9A%E6%B3%A2%E6%9D%9F%E6%95%B0%E6%8D%AE%E7%9A%84%E6%96%B9%E6%B3%95/"/>
+    <id>https://1921134176.github.io/2019/11/04/高速下载多波束数据的方法/</id>
+    <published>2019-11-04T05:55:16.000Z</published>
+    <updated>2019-11-04T06:19:22.669Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot; title=&quot;问题&quot;&gt;&lt;/a&gt;问题&lt;/h1&gt;&lt;p&gt;因《多波束数据处理》课程的需要，需要从&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="多波束数据处理" scheme="https://1921134176.github.io/categories/%E5%A4%9A%E6%B3%A2%E6%9D%9F%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/"/>
+    
+    
+      <category term="python" scheme="https://1921134176.github.io/tags/python/"/>
+    
+      <category term="多波束" scheme="https://1921134176.github.io/tags/%E5%A4%9A%E6%B3%A2%E6%9D%9F/"/>
+    
+      <category term="下载" scheme="https://1921134176.github.io/tags/%E4%B8%8B%E8%BD%BD/"/>
+    
+  </entry>
+  
+</feed>
