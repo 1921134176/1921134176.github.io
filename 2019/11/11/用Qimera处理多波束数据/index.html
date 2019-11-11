@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>用Qimera处理多波束数据 | ORANGE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="baidu-site-verification" content="www.baidu.com" />
+  
+  <meta name="description" content="[TOC] 实习目的学习掌握Qimera软件处理多波束数据的工作流程，并用Qimer软件对一个航次的多波束数据进行处理。 数据概述 数据采集航次的科考船为：Sumner  航次时间：2010&#x2F;08&#x2F;06——2010&#x2F;09&#x2F;05  仪器：Simrad EM122  测线数：216  调查区域：    处理流程打开Qimera新建项目Project-&amp;gt;New Project  添加资源文件Sou">
+<meta name="keywords" content="Qimera,多波束,报告">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用Qimera处理多波束数据">
+<meta property="og:url" content="https:&#x2F;&#x2F;1921134176.github.io&#x2F;2019&#x2F;11&#x2F;11&#x2F;%E7%94%A8Qimera%E5%A4%84%E7%90%86%E5%A4%9A%E6%B3%A2%E6%9D%9F%E6%95%B0%E6%8D%AE&#x2F;index.html">
+<meta property="og:site_name" content="ORANGE">
+<meta property="og:description" content="[TOC] 实习目的学习掌握Qimera软件处理多波束数据的工作流程，并用Qimer软件对一个航次的多波束数据进行处理。 数据概述 数据采集航次的科考船为：Sumner  航次时间：2010&#x2F;08&#x2F;06——2010&#x2F;09&#x2F;05  仪器：Simrad EM122  测线数：216  调查区域：    处理流程打开Qimera新建项目Project-&amp;gt;New Project  添加资源文件Sou">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https:&#x2F;&#x2F;1921134176.github.io&#x2F;2019&#x2F;11&#x2F;11&#x2F;%E7%94%A8Qimera%E5%A4%84%E7%90%86%E5%A4%9A%E6%B3%A2%E6%9D%9F%E6%95%B0%E6%8D%AE&#x2F;00.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;1921134176.github.io&#x2F;2019&#x2F;11&#x2F;11&#x2F;%E7%94%A8Qimera%E5%A4%84%E7%90%86%E5%A4%9A%E6%B3%A2%E6%9D%9F%E6%95%B0%E6%8D%AE&#x2F;001.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;1921134176.github.io&#x2F;2019&#x2F;11&#x2F;11&#x2F;%E7%94%A8Qimera%E5%A4%84%E7%90%86%E5%A4%9A%E6%B3%A2%E6%9D%9F%E6%95%B0%E6%8D%AE&#x2F;0001.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;1921134176.github.io&#x2F;2019&#x2F;11&#x2F;11&#x2F;%E7%94%A8Qimera%E5%A4%84%E7%90%86%E5%A4%9A%E6%B3%A2%E6%9D%9F%E6%95%B0%E6%8D%AE&#x2F;01-%E5%AF%BC%E5%85%A5%E6%B5%8B%E7%BA%BF.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;1921134176.github.io&#x2F;2019&#x2F;11&#x2F;11&#x2F;%E7%94%A8Qimera%E5%A4%84%E7%90%86%E5%A4%9A%E6%B3%A2%E6%9D%9F%E6%95%B0%E6%8D%AE&#x2F;03-%E5%BB%BA%E6%9B%B2%E9%9D%A2.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;1921134176.github.io&#x2F;2019&#x2F;11&#x2F;11&#x2F;%E7%94%A8Qimera%E5%A4%84%E7%90%86%E5%A4%9A%E6%B3%A2%E6%9D%9F%E6%95%B0%E6%8D%AE&#x2F;04-%E6%9B%B2%E9%9D%A2.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;1921134176.github.io&#x2F;2019&#x2F;11&#x2F;11&#x2F;%E7%94%A8Qimera%E5%A4%84%E7%90%86%E5%A4%9A%E6%B3%A2%E6%9D%9F%E6%95%B0%E6%8D%AE&#x2F;05-3D%E7%BC%96%E8%BE%91%E5%89%8D.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;1921134176.github.io&#x2F;2019&#x2F;11&#x2F;11&#x2F;%E7%94%A8Qimera%E5%A4%84%E7%90%86%E5%A4%9A%E6%B3%A2%E6%9D%9F%E6%95%B0%E6%8D%AE&#x2F;06-%E9%80%89%E6%8B%A9%E5%9D%8F%E7%82%B9.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;1921134176.github.io&#x2F;2019&#x2F;11&#x2F;11&#x2F;%E7%94%A8Qimera%E5%A4%84%E7%90%86%E5%A4%9A%E6%B3%A2%E6%9D%9F%E6%95%B0%E6%8D%AE&#x2F;07-%E5%88%A0%E5%8E%BB%E5%9D%8F%E7%82%B9.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;1921134176.github.io&#x2F;2019&#x2F;11&#x2F;11&#x2F;%E7%94%A8Qimera%E5%A4%84%E7%90%86%E5%A4%9A%E6%B3%A2%E6%9D%9F%E6%95%B0%E6%8D%AE&#x2F;08-3D%E7%BC%96%E8%BE%91%E5%90%8E.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;1921134176.github.io&#x2F;2019&#x2F;11&#x2F;11&#x2F;%E7%94%A8Qimera%E5%A4%84%E7%90%86%E5%A4%9A%E6%B3%A2%E6%9D%9F%E6%95%B0%E6%8D%AE&#x2F;09-swath-editor%E5%89%8D.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;1921134176.github.io&#x2F;2019&#x2F;11&#x2F;11&#x2F;%E7%94%A8Qimera%E5%A4%84%E7%90%86%E5%A4%9A%E6%B3%A2%E6%9D%9F%E6%95%B0%E6%8D%AE&#x2F;10.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;1921134176.github.io&#x2F;2019&#x2F;11&#x2F;11&#x2F;%E7%94%A8Qimera%E5%A4%84%E7%90%86%E5%A4%9A%E6%B3%A2%E6%9D%9F%E6%95%B0%E6%8D%AE&#x2F;11.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;1921134176.github.io&#x2F;2019&#x2F;11&#x2F;11&#x2F;%E7%94%A8Qimera%E5%A4%84%E7%90%86%E5%A4%9A%E6%B3%A2%E6%9D%9F%E6%95%B0%E6%8D%AE&#x2F;12.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;1921134176.github.io&#x2F;2019&#x2F;11&#x2F;11&#x2F;%E7%94%A8Qimera%E5%A4%84%E7%90%86%E5%A4%9A%E6%B3%A2%E6%9D%9F%E6%95%B0%E6%8D%AE&#x2F;13.jpg">
+<meta property="og:updated_time" content="2019-11-11T10:19:54.830Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;1921134176.github.io&#x2F;2019&#x2F;11&#x2F;11&#x2F;%E7%94%A8Qimera%E5%A4%84%E7%90%86%E5%A4%9A%E6%B3%A2%E6%9D%9F%E6%95%B0%E6%8D%AE&#x2F;00.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="ORANGE" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.jpg">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+</head>
+
+<body>
+  <div id="fullpage" class="mobile-nav-left">
+    
+      <div id="wrapper" title="Enjoy Life">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-left">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archive" title
+        
+        >归档</a>
+      
+        <a class="nav-item" href="https://github.com/1921134176" title
+        
+        >姬友</a>
+      
+        <a class="nav-item" href="/aboutme" title
+        
+        >橙先生</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-left">
+        <section id="main"><article id="post-用Qimera处理多波束数据" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      用Qimera处理多波束数据
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/11/11/%E7%94%A8Qimera%E5%A4%84%E7%90%86%E5%A4%9A%E6%B3%A2%E6%9D%9F%E6%95%B0%E6%8D%AE/" class="article-date">
+  <time datetime="2019-11-11T09:57:45.000Z" itemprop="datePublished">2019-11-11</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%A4%9A%E6%B3%A2%E6%9D%9F%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/">多波束数据处理</a>
+  </div>
+
+    
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Qimera/" rel="tag">Qimera</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%A4%9A%E6%B3%A2%E6%9D%9F/" rel="tag">多波束</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%A5%E5%91%8A/" rel="tag">报告</a></li></ul>
+
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <p>[TOC]</p>
+<h1 id="实习目的"><a href="#实习目的" class="headerlink" title="实习目的"></a>实习目的</h1><p>学习掌握Qimera软件处理多波束数据的工作流程，并用Qimer软件对一个航次的多波束数据进行处理。</p>
+<h1 id="数据概述"><a href="#数据概述" class="headerlink" title="数据概述"></a>数据概述</h1><ul>
+<li><p>数据采集航次的科考船为：Sumner</p>
+</li>
+<li><p>航次时间：2010/08/06——2010/09/05</p>
+</li>
+<li><p>仪器：Simrad EM122</p>
+</li>
+<li><p>测线数：216</p>
+</li>
+<li><p>调查区域：</p>
+<p><img src="/2019/11/11/%E7%94%A8Qimera%E5%A4%84%E7%90%86%E5%A4%9A%E6%B3%A2%E6%9D%9F%E6%95%B0%E6%8D%AE/00.jpg" alt="调查区域"></p>
+</li>
+</ul>
+<h1 id="处理流程"><a href="#处理流程" class="headerlink" title="处理流程"></a>处理流程</h1><h2 id="打开Qimera新建项目"><a href="#打开Qimera新建项目" class="headerlink" title="打开Qimera新建项目"></a>打开Qimera新建项目</h2><p>Project-&gt;New Project<br> <img src="/2019/11/11/%E7%94%A8Qimera%E5%A4%84%E7%90%86%E5%A4%9A%E6%B3%A2%E6%9D%9F%E6%95%B0%E6%8D%AE/001.jpg" alt="新建项目对话框"></p>
+<h2 id="添加资源文件"><a href="#添加资源文件" class="headerlink" title="添加资源文件"></a>添加资源文件</h2><p>Source-&gt;Add Raw Sonar File 将Simrad EM122采集的*.ALL原始数据导入到软件中，进行数据转换。</p>
+<p>Qimera将尝试自动检测和提取任何可用信息。提取的信息包括船舶配置、位置、航向、运动、声速、潮汐或GPS/GNSS高度校正（如果文件格式支持并在文件中可用）</p>
+<p><img src="/2019/11/11/%E7%94%A8Qimera%E5%A4%84%E7%90%86%E5%A4%9A%E6%B3%A2%E6%9D%9F%E6%95%B0%E6%8D%AE/0001.jpg" alt="添加原始数据对话框"></p>
+<p><img src="/2019/11/11/%E7%94%A8Qimera%E5%A4%84%E7%90%86%E5%A4%9A%E6%B3%A2%E6%9D%9F%E6%95%B0%E6%8D%AE/01-%E5%AF%BC%E5%85%A5%E6%B5%8B%E7%BA%BF.jpg" alt="导入的测线"></p>
+<h2 id="创建动态曲面"><a href="#创建动态曲面" class="headerlink" title="创建动态曲面"></a>创建动态曲面</h2><p>Dynamic Surface-&gt;Create Dynamic Surface</p>
+<p><img src="/2019/11/11/%E7%94%A8Qimera%E5%A4%84%E7%90%86%E5%A4%9A%E6%B3%A2%E6%9D%9F%E6%95%B0%E6%8D%AE/03-%E5%BB%BA%E6%9B%B2%E9%9D%A2.jpg" alt="新建曲面对话框"></p>
+<p><img src="/2019/11/11/%E7%94%A8Qimera%E5%A4%84%E7%90%86%E5%A4%9A%E6%B3%A2%E6%9D%9F%E6%95%B0%E6%8D%AE/04-%E6%9B%B2%E9%9D%A2.jpg" alt="2D曲面"></p>
+<h2 id="编辑水深测量数据"><a href="#编辑水深测量数据" class="headerlink" title="编辑水深测量数据"></a>编辑水深测量数据</h2><h3 id="可用工具："><a href="#可用工具：" class="headerlink" title="可用工具："></a>可用工具：</h3><ul>
+<li>3D Editor</li>
+<li>Slice Editor</li>
+<li>Swath Editor</li>
+<li>Spline Filtering</li>
+</ul>
+<h3 id="利用3D-Editor进行编辑"><a href="#利用3D-Editor进行编辑" class="headerlink" title="利用3D Editor进行编辑"></a>利用3D Editor进行编辑</h3><p><img src="/2019/11/11/%E7%94%A8Qimera%E5%A4%84%E7%90%86%E5%A4%9A%E6%B3%A2%E6%9D%9F%E6%95%B0%E6%8D%AE/05-3D%E7%BC%96%E8%BE%91%E5%89%8D.jpg" alt="编辑前"></p>
+<p><img src="/2019/11/11/%E7%94%A8Qimera%E5%A4%84%E7%90%86%E5%A4%9A%E6%B3%A2%E6%9D%9F%E6%95%B0%E6%8D%AE/06-%E9%80%89%E6%8B%A9%E5%9D%8F%E7%82%B9.jpg" alt="选择坏点"></p>
+<p><img src="/2019/11/11/%E7%94%A8Qimera%E5%A4%84%E7%90%86%E5%A4%9A%E6%B3%A2%E6%9D%9F%E6%95%B0%E6%8D%AE/07-%E5%88%A0%E5%8E%BB%E5%9D%8F%E7%82%B9.jpg" alt="Reject坏点"></p>
+<p><img src="/2019/11/11/%E7%94%A8Qimera%E5%A4%84%E7%90%86%E5%A4%9A%E6%B3%A2%E6%9D%9F%E6%95%B0%E6%8D%AE/08-3D%E7%BC%96%E8%BE%91%E5%90%8E.jpg" alt="编辑后"></p>
+<h3 id="利用Swath-Editor进行编辑"><a href="#利用Swath-Editor进行编辑" class="headerlink" title="利用Swath Editor进行编辑"></a>利用Swath Editor进行编辑</h3><p><img src="/2019/11/11/%E7%94%A8Qimera%E5%A4%84%E7%90%86%E5%A4%9A%E6%B3%A2%E6%9D%9F%E6%95%B0%E6%8D%AE/09-swath-editor%E5%89%8D.jpg" alt="编辑前"></p>
+<p><img src="/2019/11/11/%E7%94%A8Qimera%E5%A4%84%E7%90%86%E5%A4%9A%E6%B3%A2%E6%9D%9F%E6%95%B0%E6%8D%AE/10.jpg" alt="被剔除的灰色坏点"></p>
+<p><img src="/2019/11/11/%E7%94%A8Qimera%E5%A4%84%E7%90%86%E5%A4%9A%E6%B3%A2%E6%9D%9F%E6%95%B0%E6%8D%AE/11.jpg" alt="编辑后"></p>
+<h2 id="产品导出"><a href="#产品导出" class="headerlink" title="产品导出"></a>产品导出</h2><p>Layer-&gt;Export Surface</p>
+<p><img src="/2019/11/11/%E7%94%A8Qimera%E5%A4%84%E7%90%86%E5%A4%9A%E6%B3%A2%E6%9D%9F%E6%95%B0%E6%8D%AE/12.jpg" alt="表面输出对话框"></p>
+<p><img src="/2019/11/11/%E7%94%A8Qimera%E5%A4%84%E7%90%86%E5%A4%9A%E6%B3%A2%E6%9D%9F%E6%95%B0%E6%8D%AE/13.jpg" alt="Arcgis中加载导出的数据"></p>
+<h1 id="实习收获"><a href="#实习收获" class="headerlink" title="实习收获"></a>实习收获</h1><p>通过《多波束数据处理》课程的实习，我基本掌握了利用Qimera软件处理多波束数据了流程，并且可以对原始的多波束数据进行简单的处理，得到表面或者点云产品，为接下来相关方面研究提供了数字资料。</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p>Qimera用户手册：<a href="https://confluence.qps.nl/qimera/latest/en/qimera-reference-manual-127670805.html" target="_blank" rel="noopener">https://confluence.qps.nl/qimera/latest/en/qimera-reference-manual-127670805.html</a></p>
+
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+
+
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/11/07/Caris%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C%E6%91%98%E8%A6%81-1/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">Caris用户手册摘要-1</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/me.jpg" title="ORANGE"></img>
+    <h3 class="avatar-name">
+      
+        城三金
+      
+    </h3>
+    <p class="avatar-slogan">
+      生命之中唯缺金
+    </p>
+  </div>
+</div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/11/11/%E7%94%A8Qimera%E5%A4%84%E7%90%86%E5%A4%9A%E6%B3%A2%E6%9D%9F%E6%95%B0%E6%8D%AE/">用Qimera处理多波束数据</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/07/Caris%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C%E6%91%98%E8%A6%81-1/">Caris用户手册摘要-1</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/04/%E9%AB%98%E9%80%9F%E4%B8%8B%E8%BD%BD%E5%A4%9A%E6%B3%A2%E6%9D%9F%E6%95%B0%E6%8D%AE%E7%9A%84%E6%96%B9%E6%B3%95/">高速下载多波束数据的方法</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%A4%9A%E6%B3%A2%E6%9D%9F%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/">多波束数据处理</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/CARIS/" style="font-size: 10px;">CARIS</a> <a href="/tags/Qimera/" style="font-size: 10px;">Qimera</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/%E4%B8%8B%E8%BD%BD/" style="font-size: 10px;">下载</a> <a href="/tags/%E5%A4%9A%E6%B3%A2%E6%9D%9F/" style="font-size: 20px;">多波束</a> <a href="/tags/%E6%8A%A5%E5%91%8A/" style="font-size: 10px;">报告</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archive/2019/11/">十一月 2019</a></li></ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="http://www.gscloud.cn/" title target='_blank'
+        >地理空间数据云</a>
+      
+        <a style="display: block;" href="http://blog.sina.com.cn/enviidl" title target='_blank'
+        >ENVI-IDL技术殿堂</a>
+      
+        <a style="display: block;" href="http://skyearth.org/" title target='_blank'
+        >地像天图</a>
+      
+        <a style="display: block;" href="https://www.ngdc.noaa.gov/" title target='_blank'
+        >NOAA</a>
+      
+        <a style="display: block;" href="https://earthdata.nasa.gov/" title target='_blank'
+        >NASA</a>
+      
+        <a style="display: block;" href="https://www.eorc.jaxa.jp/ALOS/en/aw3d30/data/index.htm" title target='_blank'
+        >AW3D30</a>
+      
+        <a style="display: block;" href="https://www.codeproject.com/" title target='_blank'
+        >CODEPROJECT</a>
+      
+        <a style="display: block;" href="http://www.ypppt.com/" title target='_blank'
+        >优品PPT</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2019 CHENG XIN &nbsp;&nbsp;
+    驱动于 <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity" target="_blank" rel="noopener">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archive" class="mobile-nav-link">归档</a>
+  
+    <a href="https://github.com/1921134176" target="_blank" rel="noopener" class="mobile-nav-link">姬友</a>
+  
+    <a href="/aboutme" class="mobile-nav-link">橙先生</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>
