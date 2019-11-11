@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://1921134176.github.io/"/>
-  <updated>2019-11-07T07:52:25.029Z</updated>
+  <updated>2019-11-11T10:19:54.830Z</updated>
   <id>https://1921134176.github.io/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>用Qimera处理多波束数据</title>
+    <link href="https://1921134176.github.io/2019/11/11/%E7%94%A8Qimera%E5%A4%84%E7%90%86%E5%A4%9A%E6%B3%A2%E6%9D%9F%E6%95%B0%E6%8D%AE/"/>
+    <id>https://1921134176.github.io/2019/11/11/用Qimera处理多波束数据/</id>
+    <published>2019-11-11T09:57:45.000Z</published>
+    <updated>2019-11-11T10:19:54.830Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;[TOC]&lt;/p&gt;
+&lt;h1 id=&quot;实习目的&quot;&gt;&lt;a href=&quot;#实习目的&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="多波束数据处理" scheme="https://1921134176.github.io/categories/%E5%A4%9A%E6%B3%A2%E6%9D%9F%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/"/>
+    
+    
+      <category term="Qimera" scheme="https://1921134176.github.io/tags/Qimera/"/>
+    
+      <category term="多波束" scheme="https://1921134176.github.io/tags/%E5%A4%9A%E6%B3%A2%E6%9D%9F/"/>
+    
+      <category term="报告" scheme="https://1921134176.github.io/tags/%E6%8A%A5%E5%91%8A/"/>
+    
+  </entry>
   
   <entry>
     <title>Caris用户手册摘要-1</title>
@@ -66,9 +98,9 @@
       <category term="多波束数据处理" scheme="https://1921134176.github.io/categories/%E5%A4%9A%E6%B3%A2%E6%9D%9F%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/"/>
     
     
-      <category term="python" scheme="https://1921134176.github.io/tags/python/"/>
-    
       <category term="多波束" scheme="https://1921134176.github.io/tags/%E5%A4%9A%E6%B3%A2%E6%9D%9F/"/>
+    
+      <category term="python" scheme="https://1921134176.github.io/tags/python/"/>
     
       <category term="下载" scheme="https://1921134176.github.io/tags/%E4%B8%8B%E8%BD%BD/"/>
     
